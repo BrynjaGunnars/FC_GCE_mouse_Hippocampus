@@ -9,6 +9,8 @@ Functional Connectivity Scripts:
 
 
 Gradient construction - https://github.com/koenhaak/congrads
+ROIs used - whole-brain mask: allen_brainmask_SUBMASKED.nii.gz, hippocampus masks: allen_hippocampus_nosub_LEFT/RIGHT_1mm_erode_RS.nii.gz
+
 K-means clustering of gradients and FC analysis of clusters - kfc.py
 
 
@@ -29,4 +31,4 @@ Note - in this step the coordinates of the transformed seed voxel are entered in
 
 5. Construct the similarity matrices for the ROI. Script used - geneSimilarityMatrixMaker.py
 
-6. Enter similarity matrices into the Laplacian eigenmaps algorithm of the connectopic mapping method for gradient construction. Script used - adapted conmap.py from congrads method (https://github.com/koenhaak/congrads). Adaptation consisted only of changing variable names to fit with geneSimilarityMatrixMaker.py variable names.
+6. Enter similarity matrices into the Laplacian eigenmaps algorithm of the connectopic mapping method for gradient construction. Script used - adapted conmap.py from congrads method (https://github.com/koenhaak/congrads). Adaptation consisted only of changing variable names to fit with geneSimilarityMatrixMaker.py variable names. ROIs used - whole-brain mask: allen_brainmask_SUBMASKED.nii.gz, hippocampus masks: geneFC_Mask_LEFT/RIGHT.nii.gz
