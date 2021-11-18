@@ -1,4 +1,4 @@
-In this repository are the scripts and ROIs used for Functional Connectivity Gradient Mapping of Rodent Hippocampus, and for what purpose they were used.
+In this repository are the scripts and ROIs used for Multimodal Gradient Mapping of Rodent Hippocampus, and for what purpose they were used.
 
 Author of scripts (excluding congrads method): Brynja Gunnarsdóttir
 
