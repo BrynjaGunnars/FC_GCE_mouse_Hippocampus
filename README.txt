@@ -1,8 +1,33 @@
-In this repository are the scripts and ROIs used for Multimodal Gradient Mapping of Rodent Hippocampus, and for what purpose they were used.
+In this repository are the scripts and ROIs used for Multimodal Gradient Mapping of Rodent Hippocampus. There are also data to test the python scripts.
+Below is information on the purpose of the scripts in the repository.
 
 Author of scripts (excluding congrads method): Brynja Gunnarsdóttir
 
 Note - Author is not an experienced programmer
+
+Python version: 3.7.6
+
+Python Package                     Version            
+---------------------------------- -------------------
+glob2                              0.7                
+ipython                            7.12.0             
+jupyter                            1.0.0              
+matplotlib                         3.1.3              
+netneurotools                      0.2.1+117.g55386eb 
+networkx                           2.4                      
+nibabel                            3.0.2              
+numpy                              1.18.1             
+pathlib2                           2.3.5              
+requests                           2.22.0             
+scikit-build                       0.10.0             
+scikit-image                       0.16.2             
+scikit-learn                       0.22.1             
+scipy                              1.2.0              
+seaborn                            0.10.0             
+selenium                           3.141.0            
+sklearn                            0.0                
+spyder                             4.0.1              
+statsmodels                        0.9.0    
 
 
 Functional Connectivity Scripts:
