@@ -41,8 +41,8 @@ Step-by-step method and scripts or methods used in each step:
 
 1. Bag gradients from dataset into group-averaged gradient using whole dataset 500 times. Further cluster each group-averaged gradient using K-means algorithm
    into k = 2,3,...,10 clusters and save into matrix, B. Function used: BootstrapClusterG(voxelN, k, n, resampleSize, startMouse, endMouse, side, gradientNo), 
-   voxelN = no. voxels within ROI, k = upper limit for clustering, resampleSize = no. of bagging rounds, startMouse and endMouse=numbered subjects range (e.g. whole
-   dataset startMouse = 1, endMouse = 50), side = 'LEFT' or 'RIGHT', gradientNo = '1','2','3'....
+   voxelN = no. voxels within ROI, k = upper limit for clustering, n = no. of bagging rounds,resampleSize = size of resampled group, startMouse and 
+   endMouse=numbered subjects range (e.g. whole dataset startMouse = 1, endMouse = 50), side = 'LEFT' or 'RIGHT', gradientNo = '1','2','3'....
    
 2. Make consensus matrices from B. Function used: makeConsensusMat(mat), mat=numpy matrix.
 
