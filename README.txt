@@ -40,26 +40,24 @@ Consensus clustering of gradients and functional connectivity (FC) analysis of c
 Step-by-step method and scripts or methods used in each step:
 
 1. Bag gradients from dataset into group-averaged gradient using whole dataset 500 times. Further cluster each group-averaged gradient using K-means algorithm
-   into k = 2,3,...,10 clusters and save into matrix, B. Function used: BootstrapClusterG(voxelN, k, n, resampleSize, startMouse, endMouse, side, gradientNo), 
-   voxelN = no. voxels within ROI, k = upper limit for clustering, n = no. of bagging rounds,resampleSize = size of resampled group, startMouse and 
-   endMouse=numbered subjects range (e.g. whole dataset startMouse = 1, endMouse = 50), side = 'LEFT' or 'RIGHT', gradientNo = '1','2','3'....
+into k = 2,3,...,10 clusters and save into matrix, B. Function used: BootstrapClusterG(voxelN, k, n, resampleSize, startMouse, endMouse, side, gradientNo), 
+voxelN = no. voxels within ROI, k = upper limit for clustering, n = no. of bagging rounds,resampleSize = size of resampled group, startMouse and
+endMouse=numbered subjects range (e.g. whole dataset startMouse = 1, endMouse = 50), side = 'LEFT' or 'RIGHT', gradientNo = '1','2','3'....
    
 2. Make consensus matrices from B. Function used: makeConsensusMat(mat), mat=string with numpy matrix name.
 
 3. Choose optimal cluster solution by calculating proportion of ambiguous clustering (PAC) in the consensus matrices an Percent agreement and constructing 
-   heatmaps. function used: PAC(mat) where mat is a string with the matrix name from makeConsensusMat function. Method for percent agreement found in kfc.py and 
-   heatmaps constructed using sns.clustermap from seaborn.
+heatmaps. function used: PAC(mat) where mat is a string with the matrix name from makeConsensusMat function. Method for percent agreement found in kfc.py and 
+heatmaps constructed using sns.clustermap from seaborn.
    
 4. Cluster consensus matrix with optimal cluster solution using spectral clustering using SpectralClustering from sklearn.cluster.
 
 5. Conduct seed-based FC analysis for each cluster. The time-series from each cluster were correlated (Pearson R) to the ROIs of a resampled Allen Common
-   Coordinate Framework (CCFv3)(V3, http://help.brain-map.org/download/attachments/2818169/MouseCCF.pdf). Done by following tutorial from 
-   https://nilearn.github.io/auto_examples/03_connectivity/plot_signal_extraction.html. 
+Coordinate Framework (CCFv3)(V3, http://help.brain-map.org/download/attachments/2818169/MouseCCF.pdf). Done by following tutorial from 
+https://nilearn.github.io/auto_examples/03_connectivity/plot_signal_extraction.html. 
    
 6. Find significant correlations were then found by conducting a non-parametric permutation test against zero for the correlations between each cluster and the ROIs
-   for rest of the brain across the whole dataset and correcting for multiple comparisons using the Benjamini-Hochberg method with a false discovery rate (FDR) of
-   0.005. Non-parametric permutation test conducted using nnstats.permtest_1samp from netneurotools, multiple comparison correction conducted using 
-   statsmodels.stats.multitest.multipletests from statsmodels.
+for rest of the brain across the whole dataset and correcting for multiple comparisons using the Benjamini-Hochberg method with a false discovery rate (FDR) of  0.005. Non-parametric permutation test conducted using nnstats.permtest_1samp from netneurotools, multiple comparison correction conducted using    statsmodels.stats.multitest.multipletests from statsmodels.
 
 
 Hippocampus Gene Expression Gradients:
