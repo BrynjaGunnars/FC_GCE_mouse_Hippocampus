@@ -47,8 +47,8 @@ Step-by-step method and scripts or methods used in each step:
 2. Make consensus matrices from B. Function used: makeConsensusMat(mat), mat=string with numpy matrix name.
 
 3. Choose optimal cluster solution by calculating proportion of ambiguous clustering (PAC) in the consensus matrices an Percent agreement and constructing 
-   heatmaps. function used: PAC(mat) where mat is the matrix from makeConsensusMat function. Method for percent agreement found in kfc.py and heatmaps constructed 
-   using sns.clustermap from seaborn.
+   heatmaps. function used: PAC(mat) where mat is a string with the matrix name from makeConsensusMat function. Method for percent agreement found in kfc.py and 
+   heatmaps constructed using sns.clustermap from seaborn.
    
 4. Cluster consensus matrix with optimal cluster solution using spectral clustering using SpectralClustering from sklearn.cluster.
 
