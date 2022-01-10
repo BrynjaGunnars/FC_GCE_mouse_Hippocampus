@@ -13,11 +13,11 @@ glob2                              0.7
 ipython                            7.12.0             
 jupyter                            1.0.0              
 matplotlib                         3.1.3              
-netneurotools                      0.2.1+117.g55386eb 
-networkx                           2.4                      
+netneurotools                      0.2.1+117.g55386eb                     
 nibabel                            3.0.2              
 numpy                              1.18.1             
-pathlib2                           2.3.5              
+pathlib2                           2.3.5
+pandas                             0.25.3  
 requests                           2.22.0             
 scikit-build                       0.10.0             
 scikit-image                       0.16.2             
