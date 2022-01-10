@@ -21,8 +21,7 @@ pandas                             0.25.3
 requests                           2.22.0             
 scikit-build                       0.10.0             
 scikit-image                       0.16.2             
-scikit-learn                       0.22.1             
-scipy                              1.2.0              
+scikit-learn                       0.22.1                         
 seaborn                            0.10.0             
 selenium                           3.141.0            
 sklearn                            0.0                
