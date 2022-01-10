@@ -44,7 +44,7 @@ Step-by-step method and scripts or methods used in each step:
    voxelN = no. voxels within ROI, k = upper limit for clustering, n = no. of bagging rounds,resampleSize = size of resampled group, startMouse and 
    endMouse=numbered subjects range (e.g. whole dataset startMouse = 1, endMouse = 50), side = 'LEFT' or 'RIGHT', gradientNo = '1','2','3'....
    
-2. Make consensus matrices from B. Function used: makeConsensusMat(mat), mat=numpy matrix.
+2. Make consensus matrices from B. Function used: makeConsensusMat(mat), mat=string with numpy matrix name.
 
 3. Choose optimal cluster solution by calculating proportion of ambiguous clustering (PAC) in the consensus matrices an Percent agreement and constructing 
    heatmaps. function used: PAC(mat) where mat is the matrix from makeConsensusMat function. Method for percent agreement found in kfc.py and heatmaps constructed 
